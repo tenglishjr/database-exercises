@@ -27,7 +27,7 @@ WHERE sales_in_millions < 20\G
 
 SELECT 'All the albums with a genre of "Rock".' AS 'Rock Albums';
 SELECT * FROM albums
-WHERE genre = 'Rock'\G
+WHERE genre LIKE '%rock%'\G
 
 --   Why do these query results not include albums with a genre of "Hard rock" or "Progressive rock"?
--- ANSWER: values are case-sensitive
+-- ANSWER: values are case-sensitive = the 'LIKE' keyword makes in case insensitive
