@@ -14,7 +14,7 @@
 
 -- ******************************************
 
-SELECT 'Shows all albums in the table' AS '''All albums''';
+SELECT record_name AS 'All albums in the table';
 -- a. Makes all the albums 10 times more popular (sales * 10)
 UPDATE albums
 SET sales_in_millions = sales_in_millions * 10;
