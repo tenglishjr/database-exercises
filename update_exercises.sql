@@ -14,19 +14,16 @@
 
 -- ******************************************
 
--- a. Selects all albums in the table
-SELECT * FROM albums\G
--- -- -- a. Makes all the albums 10 times more popular (sales * 10)
+SELECT 'Shows all albums in the table' AS '''All albums''';
+-- a. Makes all the albums 10 times more popular (sales * 10)
 UPDATE albums
 SET sales_in_millions = sales_in_millions * 10;
 -- Shows all albums in the table after increase in popularity
 SELECT * FROM albums\G
 
 
--- b. Selects all albums released before 1980
-SELECT * FROM albums
-WHERE release_date < 1980\G
--- -- -- b.  Moves all the albums before 1980 back to the 1800s.
+SELECT 'Shows all albums released before 1980' AS '''All albums before 1980''';
+-- b.  Moves all the albums before 1980 back to the 1800s.
 UPDATE albums
 SET release_date = release_date - 100
 WHERE release_date < 1980;
@@ -35,7 +32,7 @@ SELECT * FROM albums
 WHERE release_date < 1980\G
 
 
--- c. Selects all albums by Michael Jackson
+SELECT 'Shows all albums by Michael Jackson' AS '''All albums by Michael Jackson''';
 SELECT * FROM albums
 WHERE artist = 'Michael Jackson'\G
 -- -- -- c. Changes 'Michael Jackson' to 'Peter Jackson'
