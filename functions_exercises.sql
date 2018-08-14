@@ -46,10 +46,6 @@ where last_name like 'E%' and
 last_name like '%e';
 
 -- Find all employees hired in the 90s and born on Christmas — 362 rows.
-select now();
-select hire_date from employees
-limit 3;
-
 select concat(
   first_name,
   ' ',
